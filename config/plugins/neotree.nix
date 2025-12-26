@@ -4,10 +4,10 @@
         
     settings = {
       sources = [ "filesystem" "buffers" "git_status" ];
-      source_selector = {
-        winbar = true;
-        lualine = false;
-      };
+      # source_selector = {
+      #   winbar = true;
+      #   lualine = false;
+      # };
       openFilesDoNotReplaceTypes = [ "terminal" "Trouble" "trouble" "qf" "Outline" ];
 
       filesystem = {
