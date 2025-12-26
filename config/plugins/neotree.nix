@@ -9,12 +9,14 @@
       #   lualine = false;
       # };
       openFilesDoNotReplaceTypes = [ "terminal" "Trouble" "trouble" "qf" "Outline" ];
-
+      
+      close_if_last_window = true;
       filesystem = {
-        bindToCwd = false;
-        followCurrentFile.enabled = true;
-        useLibuvFileWatcher = true;
-      };
+        follow_current_file = {
+          enabled = true;
+          leave_dirs_open = true;
+        };
+      };      
 
       window = {
         mappings = {
