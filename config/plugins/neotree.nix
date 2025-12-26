@@ -21,27 +21,20 @@
           "l" = "open";
           "h" = "close_node";
           "<space>" = "none";
-          
-
-
+          "P" = lib.nixvim.utils.listToUnkeyedAttrs ["toggle_preview"] // {config = { use_float = false; }; }; 
           "y" = lib.nixvim.utils.listToUnkeyedAttrs [ {__raw = ''
-          function(state)
-              local node = state.tree:get_node()
-              local path = node:get_id()
-              vim.print("Yanked:".. path)
-              vim.fn.setreg("+", path, "c")
-          end
+            function(state)
+                local node = state.tree:get_node()
+                local path = node:get_id()
+                vim.print("Yanked:".. path)
+                vim.fn.setreg("+", path, "c")
+            end
           '';} ] // { desc = "Copy Path to Clipboard"; };
-          
-
-
-
-          # "O" = {
-          # };
-          # "P" = {
-            # command = "toggle_preview";
-            # config = { use_float = false; };
-          # };
+          "O" = lib.nixvim.utils.listToUnkeyedAttrs [ {__raw = ''
+            function(state)
+              require("lazy.util").open(state.tree:get_node().path, { system = true })
+            end
+          '';} ] // { desc = "Open with System Application"; };
         };
       };
 
