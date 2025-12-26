@@ -11,7 +11,7 @@
 
   # plugins.lazy.enable = true;
   plugins.tmux-navigator.enable = true;
-  plugins.blame.enable = true;
+  # plugins.blame.enable = true;
 
   plugins.lsp = {
     enable = true;
@@ -25,7 +25,7 @@
     enable = true;
     highlight.enable = true;
     indent.enable = true;
-    folding.enable = false;
+    folding.enable = true;
     grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
   };
 
