@@ -1,6 +1,6 @@
 {
   # Import all your configuration modules here
-  imports = [ ./plugins ];
+  imports = [ ./options.nix ./keymaps.nix ./plugins ];
  
   globals.mapleader = " "; # Sets the leader key to comma
 
