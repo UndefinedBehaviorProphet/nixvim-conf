@@ -7,6 +7,7 @@
     ./lazygit.nix
     ./gitsigns.nix
     ./telescope.nix
+    ./dashboard.nix
   ];
 
   # plugins.lazy.enable = true;
