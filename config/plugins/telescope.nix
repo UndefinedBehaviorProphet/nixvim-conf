@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }:{
   plugins.telescope = {
     enable = true;
 
@@ -11,4 +11,8 @@
       "<leader>fh" = { action = "help_tags"; options = { desc = "Telescope help tags"; }; };
     };
   };
+
+  extraPackages = [
+    pkgs.ripgrep # required for explorer search
+  ];
 }
