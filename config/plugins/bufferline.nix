@@ -11,7 +11,7 @@
         offsets = [
           {
             filetype = "neo-tree";
-            text = "";
+            text = "Tree";
             highlight = "Directory";
             text_align = "left";
           }
