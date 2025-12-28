@@ -8,6 +8,7 @@
     ./gitsigns.nix
     ./telescope.nix
     ./dashboard.nix
+    ./snacks.nix
   ];
 
   # plugins.lazy.enable = true;
